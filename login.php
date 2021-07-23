@@ -1,3 +1,6 @@
+<?php include ('server.php') ?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,13 +25,24 @@
               
           <form action="login.php" method="post">
               <div class="form-group mb-3">
-                  <label for="email">Email</label>
-                  <input type="email" class="form-control " placeholder="Enter your email" name="email">
+                  <label for="username">Username</label>
+                  <input type="text" class="form-control " placeholder="Enter your username" name="username">
               </div>
               <div class="form-group mb-3">
                 <label for="passsword">Password</label>
                 <input type="password" class="form-control" placeholder="Enter your password" name="password">
             </div>
+
+        	  <div class="mb-1">
+		    <label class="form-label">Select User Type:</label>
+		  </div>
+		  <select class="form-select mb-3"
+		          name="role" 
+		          aria-label="Default select example">
+			  <option selected value="user">User</option>
+			  <option value="admin">Admin</option>
+      </select>
+      
             <div class="form-group form-check">
                 <input type="checkbox" name="checkbox" class="form-check-input" id="checkbox">
                 <label class="form-check-label" for="checkbox">Remember Me</label>

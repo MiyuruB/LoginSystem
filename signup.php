@@ -1,3 +1,6 @@
+<?php include ('server.php') ?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -16,7 +19,10 @@
   </head>
   <body>
     <div class="signup-form">
-      <form action="./signup.php" method="post">
+      <form action="signup.php" method="post">
+
+      <?php include(errors.php) ?>
+
       <h2>Sign Up</h2>
       <p>Please fill in this form to create an account!</p>
       <hr>
