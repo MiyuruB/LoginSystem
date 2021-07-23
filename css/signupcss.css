@@ -3,7 +3,7 @@ body {
 	color: #fff;
 	background: #19aa8d;
 	font-family: 'Roboto', sans-serif;
-	background-image: url("bgmain.jpeg");
+	background-image: url("../img/bgmain.jpeg");
 }
 .form-control {
 	font-size: 15px;

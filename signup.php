@@ -10,13 +10,13 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="signupcss.css">
-    <title>Hello, world!</title>
+    <link rel="stylesheet" type="text/css" href="./css/signupcss.css">
+    <title>Sign Up!</title>
 
   </head>
   <body>
     <div class="signup-form">
-      <form action="/examples/actions/confirmation.php" method="post">
+      <form action="./signup.php" method="post">
       <h2>Sign Up</h2>
       <p>Please fill in this form to create an account!</p>
       <hr>
@@ -65,10 +65,10 @@
         <label class="form-check-label"><input type="checkbox" required="required"> I accept the <a href="#">Terms of Use</a> &amp; <a href="#">Privacy Policy</a></label>
       </div>
       <div class="form-group">
-              <button type="submit" class="btn btn-primary btn-lg">Sign Up</button>
+              <button type="submit" name="signupbtn" class="btn btn-primary btn-lg">Sign Up</button>
           </div>
       </form>
-    <div class="text-center">Already have an account? <a href="./index.html">Login here</a></div>
+    <div class="text-center">Already have an account? <a href="./login.php">Login here</a></div>
   </div>
 
 
