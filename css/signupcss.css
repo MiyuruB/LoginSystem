@@ -87,3 +87,10 @@ body {
 	font-size: 7px;
 	position: absolute;
 }
+
+.mycss{
+	color: green;
+    border:1px solid #000;
+    background: #ccc;
+    padding: 10px;
+}
