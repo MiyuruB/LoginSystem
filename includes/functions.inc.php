@@ -73,10 +73,10 @@ function createUser($conn, $name, $email, $username, $password ) {
 
     $hashpwd = password_hash($password, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "ssss", $username, $email, $username, $hashpwd);
+    mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashpwd);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt); 
-    header("location: ../signup.php?error=none");
+    header("location: ../login.php");
     exit();
 }
 
@@ -110,7 +110,20 @@ function loginUser($conn, $username, $pwd){
         session_start();
         $_SESSION["userid"] = $uidExists["userId"];
         $_SESSION["useruid"] = $uidExists["userUid"];
+        // updating last login
+        $query = "UPDATE users SET last_login = NOW()"; 
+
+        $query .= "WHERE userId = {$_SESSION['userid']} LIMIT 1";
+        
+        $result_set = mysqli_query($conn, $query);
+
+        if (!$result_set) {
+            die ("DB query fail");
+        }
+
+      
         header("location: ../index.php");
         exit();
     }
-}
+} 
+

@@ -11,8 +11,8 @@ if(isset($_POST["submit"])){
     $passwordrepeat = $_POST["passwordrepeat"];
 
 
-    require_once 'dbh.inc.php';
-    require_once 'functions.inc.php';
+    include_once   'dbh.inc.php';
+    include_once 'functions.inc.php';
     
     if (emptyInputSignup($name, $email,$username, $password, $passwordrepeat) !== false) {
       header("location: ../signup.php?error=emptyinput");

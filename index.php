@@ -4,17 +4,19 @@
 <!doctype html>
 <html lang="en">
   <head>
+  <link rel="icon" href="img/fav.png" type="image/png">
+
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-    <title>Hello, world!</title>
+    <title>Welcome!</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Blog</a>
@@ -24,7 +26,7 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Home</a>
         </li>
         <?php
         if (isset ($_SESSION["useruid"])){
@@ -49,7 +51,27 @@
     </div>
   </div>
 </nav>
+<section class = "index-intro">
+<style>
+.welcome{
+    color:  #000000	;
+    text-align: center;
+    text-shadow:2px 2px 4px black;
+    background: ;
+    padding: 10px;
+    font-size: 300%;
+}
+</style>
+<?php
+        if (isset ($_SESSION["useruid"])){
+          echo  "<p class = 'welcome' > Welcome to home page " . $_SESSION["useruid"] . "</p>";
+       
+        }
 
+        ?> 
+
+
+</section>
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
